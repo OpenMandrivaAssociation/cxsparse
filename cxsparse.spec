@@ -3,7 +3,7 @@
 %define name		cxsparse
 %define NAME		CXSparse
 %define version		2.2.2
-%define release		%mkrel 2
+%define release		%mkrel 3
 %define major		%{version}
 %define libname		%mklibname %{name} %{major}
 %define develname	%mklibname %{name} -d
@@ -45,7 +45,7 @@ Summary:	Library of direct methods for sparse linear systems
 Group:		System/Libraries
 Provides:	%{libname} = %{epoch}:%{version}-%{release}
 Obsoletes:	%mklibname %{name} 2
-Obsoletes:	%mklibname %{name} 2.1.1
+Obsoletes:	%mklibname %{name} 2.2.1
 
 %description -n %{libname}
 CSparse is a package of direct methods for sparse linear systems written
