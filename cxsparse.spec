@@ -3,7 +3,7 @@
 %define name		cxsparse
 %define NAME		CXSparse
 %define version		2.2.2
-%define release		%mkrel 1
+%define release		%mkrel 2
 %define major		%{version}
 %define libname		%mklibname %{name} %{major}
 %define develname	%mklibname %{name} -d
@@ -11,12 +11,13 @@
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
+Epoch:		%{epoch}
 Summary:	Direct methods for sparse linear systems
 Group:		System/Libraries
 License:	LGPL
 URL:		http://www.cise.ufl.edu/research/sparse/CXSparse/
 Source0:	http://www.cise.ufl.edu/research/sparse/CXSparse/%{NAME}-%{version}.tar.gz
-Source1:	http://www.cise.ufl.edu/research/sparse/ufconfig/UFconfig-3.1.0.tar.gz
+Source1:	http://www.cise.ufl.edu/research/sparse/ufconfig/UFconfig-3.2.0.tar.gz
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
@@ -43,6 +44,8 @@ matrices, using either int or UF_long integers.
 Summary:	Library of direct methods for sparse linear systems
 Group:		System/Libraries
 Provides:	%{libname} = %{epoch}:%{version}-%{release}
+Obsoletes:	%mklibname %{name} 2
+Obsoletes:	%mklibname %{name} 2.1.1
 
 %description -n %{libname}
 CSparse is a package of direct methods for sparse linear systems written
