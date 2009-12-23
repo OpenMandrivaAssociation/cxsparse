@@ -2,8 +2,8 @@
 
 %define name		cxsparse
 %define NAME		CXSparse
-%define version		2.2.2
-%define release		%mkrel 5
+%define version		2.2.3
+%define release		%mkrel 1
 %define major		%{version}
 %define libname		%mklibname %{name} %{major}
 %define develname	%mklibname %{name} -d
@@ -73,7 +73,7 @@ linked against %{NAME}.
 %package -n %{develname}
 Summary:	C direct methods for sparse linear systems
 Group:		Development/C
-Requires:	suitesparse-common-devel >= 3.0.0
+Requires:	suitesparse-common-devel >= 3.2.0-2
 Requires:	%{libname} = %{epoch}:%{version}-%{release}
 Provides:	%{name}-devel = %{epoch}:%{version}-%{release}
 Obsoletes:	%mklibname %name 2 -d
