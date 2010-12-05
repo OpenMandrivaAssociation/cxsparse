@@ -3,7 +3,7 @@
 %define name		cxsparse
 %define NAME		CXSparse
 %define version		2.2.3
-%define release		%mkrel 1
+%define release		%mkrel 2
 %define major		%{version}
 %define libname		%mklibname %{name} %{major}
 %define develname	%mklibname %{name} -d
