@@ -1,5 +1,5 @@
 %define NAME	CXSparse
-%define major	%{version}
+%define major	3
 %define libname	%mklibname %{name} %{major}
 %define devname	%mklibname %{name} -d
 
@@ -37,6 +37,8 @@ matrices, using either int or UF_long integers.
 %package -n %{libname}
 Summary:	Library of direct methods for sparse linear systems
 Group:		System/Libraries
+%define	oldname	%{mklibname %{name} 3.1.1}
+%rename		%{oldname}
 
 %description -n %{libname}
 CSparse is a package of direct methods for sparse linear systems written
