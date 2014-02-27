@@ -5,11 +5,11 @@
 
 Name:		cxsparse
 Version:	3.1.1
-Release:	1
+Release:	2
 Epoch:		1
 Summary:	Direct methods for sparse linear systems
 Group:		System/Libraries
-License:	LGPL
+License:	LGPLv2+
 URL:		http://www.cise.ufl.edu/research/sparse/CXSparse/
 Source0:	http://www.cise.ufl.edu/research/sparse/CXSparse/%{NAME}-%{version}.tar.gz
 BuildRequires:	suitesparse-common-devel >= 4.0.0
