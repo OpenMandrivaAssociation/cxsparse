@@ -1,7 +1,7 @@
-%define NAME		CXSparse
-%define major		%{version}
-%define libname		%mklibname %{name} %{major}
-%define develname	%mklibname %{name} -d
+%define NAME	CXSparse
+%define major	%{version}
+%define libname	%mklibname %{name} %{major}
+%define devname	%mklibname %{name} -d
 
 Name:		cxsparse
 Version:	3.1.1
@@ -61,14 +61,14 @@ matrices, using either int or UF_long integers.
 This package contains the library needed to run programs dynamically
 linked against %{NAME}.
 
-%package -n %{develname}
+%package -n %{devname}
 Summary:	C direct methods for sparse linear systems
 Group:		Development/C
 Requires:	suitesparse-common-devel >= 4.0.0
 Requires:	%{libname} = %{EVRD}
 Provides:	%{name}-devel = %{EVRD}
 
-%description -n %{develname}
+%description -n %{devname}
 CSparse is a package of direct methods for sparse linear systems written
 to complement the book "Direct Methods for Sparse Linear Systems", by
 Timothy A. Davis. The algorithms in CSparse have been chosen with 
@@ -102,8 +102,8 @@ ln -sf %{_includedir}/suitesparse/SuiteSparse_config.* ../SuiteSparse_config
 %build
 cd %{NAME}
 pushd Lib
-    %make -f Makefile CC=%__cc CFLAGS="%{optflags} -fPIC -I%{_includedir}/suitesparse" INC=
-    %__cc -shared -Wl,-soname,lib%{name}.so.%{major} -o lib%{name}.so.%{version} -lm *.o
+    %make -f Makefile CC=gcc CFLAGS="%{optflags} -fPIC -I%{_includedir}/suitesparse" INC=
+    gcc -shared -Wl,-soname,lib%{name}.so.%{major} -o lib%{name}.so.%{version} -lm *.o
 popd
 
 %install
@@ -128,11 +128,10 @@ install -d -m 755 %{buildroot}%{_docdir}/%{name}
 install -m 644 README.txt Doc/*.txt Doc/ChangeLog %{buildroot}%{_docdir}/%{name}
 
 %files -n %{libname}
-%{_libdir}/*.so.*
+%{_libdir}/lib%{name}.so.%{major}*
 
-%files -n %{develname}
+%files -n %{devname}
 %{_docdir}/%{name}
 %{_includedir}/*
-%{_libdir}/*.so
-%{_libdir}/*.a
-
+%{_libdir}/lib%{name}.so
+%{_libdir}/lib%{name}.a
