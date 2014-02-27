@@ -4,14 +4,14 @@
 %define devname	%mklibname %{name} -d
 
 Name:		cxsparse
-Version:	3.1.1
-Release:	2
+Version:	3.1.2
+Release:	1
 Epoch:		1
 Summary:	Direct methods for sparse linear systems
 Group:		System/Libraries
 License:	LGPLv2+
 URL:		http://www.cise.ufl.edu/research/sparse/CXSparse/
-Source0:	http://www.cise.ufl.edu/research/sparse/CXSparse/%{NAME}-%{version}.tar.gz
+Source0:	http://www.cise.ufl.edu/research/sparse/CXSparse/versions/%{NAME}-%{version}.tar.gz
 BuildRequires:	suitesparse-common-devel >= 4.0.0
 
 %description
