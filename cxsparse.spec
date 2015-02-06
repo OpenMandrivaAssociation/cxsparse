@@ -5,7 +5,7 @@
 
 Name:		cxsparse
 Version:	3.1.2
-Release:	1
+Release:	2
 Epoch:		1
 Summary:	Direct methods for sparse linear systems
 Group:		System/Libraries
