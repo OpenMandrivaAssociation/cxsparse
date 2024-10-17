@@ -10,7 +10,7 @@ Epoch:		1
 Summary:	Direct methods for sparse linear systems
 Group:		System/Libraries
 License:	LGPLv2+
-URL:		http://www.cise.ufl.edu/research/sparse/CXSparse/
+URL:		https://www.cise.ufl.edu/research/sparse/CXSparse/
 Source0:	http://www.cise.ufl.edu/research/sparse/CXSparse/versions/%{NAME}-%{version}.tar.gz
 BuildRequires:	suitesparse-common-devel >= 4.0.0
 
